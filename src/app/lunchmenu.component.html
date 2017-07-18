@@ -1,0 +1,22 @@
+<h2>Great Lunch Ideas</h2>
+<div id="addNew">
+  <label>Lunch Recommendation:</label> <input #lunchMeal  id="lunchMeal" />
+  <img [src]="addIcon" class="addIcon" (click)="addLunchMeal(lunchMeal.value); lunchMeal.value=''">
+</div>
+<ul class="lunchMenus">
+  <li *ngFor="let lunchmenu of lunchmenus"
+    [class.selected]="lunchmenu === selectedlunchmenu"
+    (click)="onSelect(lunchmenu)">
+    <span class="badge">{{lunchmenu.id}}</span> {{lunchmenu.recommendation}}
+    <img [src]="deleteIcon" class="delete" (click)="deleteLunchMeal(lunchmenu); $event.stopPropagation()" />
+  </li>
+</ul>
+<div *ngIf="selectedlunchmenu">
+  <span class="selectedLunchMeal">
+    <img [src]="cuttleries" />
+     <h2>Here is a great Lunch to try:</h2>
+    {{selectedlunchmenu.recommendation | lowercase}}
+  <img (click)="gotoDetail()" [src]="editIcon" class="editIcon"/>
+  </span>
+  
+</div>

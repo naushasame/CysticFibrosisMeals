@@ -1,0 +1,57 @@
+.editLunchItem{
+  background-color:lightpink;
+  padding:3%;
+  border-radius:10px;
+  margin-top:5%;
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  color: #607D8B;
+  font-weight: bold;
+}
+img{
+  display:block;
+  margin-top:2%;
+  text-align: center;
+  cursor:pointer;
+  border:lightpink  solid 3px;
+  margin-left:45%;
+  border-radius: 20px;
+}
+img:hover{
+  border:green solid 3px;
+  transition-duration: 1.5s;
+}
+input {
+background-color:lightblue;
+padding:0.5%;
+width:50%;
+height:35px;
+color:darkgreen;
+font-weight: bold;
+border-radius: 10px;
+transition-duration: 1.5s;
+cursor: pointer;
+}
+input:hover{
+  background-color:lightgreen;
+}
+button {
+  margin-top: 20px;
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc; 
+  cursor: auto;
+}
