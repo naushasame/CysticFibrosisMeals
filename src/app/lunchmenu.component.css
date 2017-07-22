@@ -14,9 +14,11 @@
 }
 .lunchMenus li {
 height:auto;
-padding:1%;
+padding:3%;
+padding-bottom: 15%;
+padding-right:5%;
 margin:2%;
-border-radius:5px;
+border-radius:10px;
 background-color:lightblue;
 
 }
@@ -35,17 +37,54 @@ background-color:lightblue;
   position: relative;
   top: -3px;
 }
-.lunchMenus .badge {
-  display: inline-block;
+.badges{
+  width:60%;
+  display:block;
+}
+.badge {
   font-size: small;
   color: white;
-  padding: 0.8em 0.7em 0 0.7em;
+  padding: 2%;
   background-color:darkkhaki;
   line-height: 1em;
   position: relative;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px;
+  border-radius: 10px;
+}
+.badgeRight{
+  font-size: small;
+  line-height: 1em;
+  background-color:darkcyan;
+  color: white;
+  padding:2%;
+  border-radius: 10px;
+}
+.lunchRecommendations{
+  width:80%;
+  margin-top:3%;
+  font-size: small;
+  font-weight: bold;
+  line-height: 1em;
+  background-color:lightskyblue;
+  color: darkred;
+  padding:2%;
+  border-radius: 10px;
+  float:left;
+}
+.lunchRecommendationsDetailed{
+  width:95%;
+  margin-top:3%;
+  margin-bottom: 3%;
+  font-size: large;
+  font-weight: bold;
+  background-color:lightskyblue;
+  color: darkred;
+  padding:5%;
+  border-radius: 10px;
+  float:left
+}
+.avgmealcostDetail{
+color:darkred;
+text-decoration: underline;
 }
 button {
   font-family: Arial;
@@ -123,10 +162,12 @@ div#addNew{
   color:darkgreen;
   font-weight: bold;
   padding:3%;
+  padding-bottom: 5%;
   border-radius:10px;
 }
 
 input#lunchMeal {
+display:block;
 background-color:lightblue;
 padding:0.5%;
 width:50%;
@@ -139,4 +180,22 @@ cursor: pointer;
 }
 input#lunchMeal:hover{
   background-color:lightgreen;
+}
+input#lunchMealavgmealcost {
+display:block;
+background-color:lightblue;
+padding:0.5%;
+width:50%;
+height:35px;
+color:darkgreen;
+font-weight: bold;
+border-radius: 10px;
+transition-duration: 1.5s;
+cursor: pointer;
+}
+input#lunchMealavgmealcost:hover{
+  background-color:lightgreen;
+}
+.addNewMeal{
+  width:80%;
 }

@@ -40,10 +40,10 @@ export class LunchMenuComponent implements OnInit {
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedlunchmenu.id]);
   }
-  addLunchMeal(lunchMeal: string): void {
+  addLunchMeal(lunchMeal: string,lunchMealavgmealcost:number): void {
   lunchMeal = lunchMeal.trim();
-  if (!lunchMeal) { return; }
-  this.lunchmenuService.create(lunchMeal)
+  if (!lunchMeal||!lunchMealavgmealcost) { return; }
+  this.lunchmenuService.create(lunchMeal,lunchMealavgmealcost)
     .then(lunchmenu => {
       this.lunchmenus.push(lunchmenu);
       this.selectedlunchmenu = null;

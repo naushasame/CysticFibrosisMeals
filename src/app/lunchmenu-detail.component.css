@@ -28,7 +28,7 @@ input {
 background-color:lightblue;
 padding:0.5%;
 width:50%;
-height:35px;
+height:45px;
 color:darkgreen;
 font-weight: bold;
 border-radius: 10px;
@@ -38,6 +38,21 @@ cursor: pointer;
 input:hover{
   background-color:lightgreen;
 }
+input.cost {
+background-color:lightblue;
+padding:0.5%;
+width:20%;
+height:35px;
+color:darkgreen;
+font-weight: bold;
+border-radius: 10px;
+transition-duration: 1.5s;
+cursor: pointer;
+}
+input.cost:hover{
+  background-color:lightgreen;
+}
+
 button {
   margin-top: 20px;
   font-family: Arial;

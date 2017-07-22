@@ -37,13 +37,13 @@ var LunchMenuComponent = (function () {
     LunchMenuComponent.prototype.gotoDetail = function () {
         this.router.navigate(['/detail', this.selectedlunchmenu.id]);
     };
-    LunchMenuComponent.prototype.addLunchMeal = function (lunchMeal) {
+    LunchMenuComponent.prototype.addLunchMeal = function (lunchMeal, lunchMealavgmealcost) {
         var _this = this;
         lunchMeal = lunchMeal.trim();
-        if (!lunchMeal) {
+        if (!lunchMeal || !lunchMealavgmealcost) {
             return;
         }
-        this.lunchmenuService.create(lunchMeal)
+        this.lunchmenuService.create(lunchMeal, lunchMealavgmealcost)
             .then(function (lunchmenu) {
             _this.lunchmenus.push(lunchmenu);
             _this.selectedlunchmenu = null;

@@ -2,7 +2,9 @@
   <h2>Lets Edit Meal {{lunchmenu.id}} details</h2>
   <div>
     <label>Recommendation: </label>
-    <input [(ngModel)]="lunchmenu.recommendation" placeholder="recommendation" />
+    <input [(ngModel)]="lunchmenu.recommendation" placeholder="Recommendation" />
+    <label>Cost: </label>
+    <input [(ngModel)]="lunchmenu.avgmealcost" placeholder="Average cost" class="cost"/>
   </div>
   <img [src]="editimg" (click)="saveAndGoBack()" /><p>Save and Go Back to Recommendations</p>
 </div>

@@ -45,9 +45,9 @@ var LunchMenuService = (function () {
             .then(function () { return lunchmenu; })
             .catch(this.handleError);
     };
-    LunchMenuService.prototype.create = function (recommendation) {
+    LunchMenuService.prototype.create = function (recommendation, lunchMealavgmealcost) {
         return this.http
-            .post(this.lunchmenusUrl, JSON.stringify({ recommendation: recommendation }), { headers: this.headers })
+            .post(this.lunchmenusUrl, JSON.stringify({ recommendation: recommendation, avgmealcost: lunchMealavgmealcost }), { headers: this.headers })
             .toPromise()
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);

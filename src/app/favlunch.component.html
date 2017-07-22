@@ -1,8 +1,10 @@
 <h3>Favourite Lunches of All</h3>
 <div class="grid grid-pad">
   <a *ngFor="let lunchmenu of lunchmenus"  [routerLink]="['/detail', lunchmenu.id]"  class="col-1-4">
-    <div class="module hero">
-      <h4>{{lunchmenu.recommendation}}</h4>
+    <div class="module">
+      <h4><span class="theCost">{{lunchmenu.avgmealcost}} Pounds to prepare</span>
+      {{lunchmenu.recommendation}}
+    </h4>
     </div>
   </a>
 </div>

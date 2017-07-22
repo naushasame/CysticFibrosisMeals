@@ -28,6 +28,7 @@ h4 {
 }
 .module {
   padding: 20px;
+  padding-top:0;
   text-align: center;
   color: #eee;
   max-height: 120px;
@@ -43,6 +44,14 @@ h4 {
   border-radius:2px;
   box-shadow: 4px 4px 10px 8px #777;
 	transition-duration: 0.5s
+}
+.theCost{
+  padding:1%;
+  background-color: orange;
+  display:block;
+  border-radius:15px;
+  min-width: 120px;
+  margin-bottom: 5px;
 }
 .grid-pad {
   padding: 10px 0;

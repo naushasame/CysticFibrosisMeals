@@ -1,21 +1,30 @@
 <h2>Great Lunch Ideas</h2>
 <div id="addNew">
+  <h2>Add a new Idea here</h2>
+  <span class="addNewMeal">
   <label>Lunch Recommendation:</label> <input #lunchMeal  id="lunchMeal" />
-  <img [src]="addIcon" class="addIcon" (click)="addLunchMeal(lunchMeal.value); lunchMeal.value=''">
+  <label>Average Cost:</label> <input #lunchMealavgmealcost  id="lunchMealavgmealcost" />
+  </span>
+  <img [src]="addIcon" class="addIcon" (click)="addLunchMeal(lunchMeal.value,lunchMealavgmealcost.value); lunchMeal.value=''" />
 </div>
 <ul class="lunchMenus">
   <li *ngFor="let lunchmenu of lunchmenus"
     [class.selected]="lunchmenu === selectedlunchmenu"
     (click)="onSelect(lunchmenu)">
-    <span class="badge">{{lunchmenu.id}}</span> {{lunchmenu.recommendation}}
+    <span class=badges>
+      <span class="badge">Lunch Idea {{lunchmenu.id}}</span>
+      <span class="badgeRight">Average Cost:{{lunchmenu.avgmealcost}} Pounds</span>
+    </span>
+       <span class="lunchRecommendations">{{lunchmenu.recommendation}}</span>
     <img [src]="deleteIcon" class="delete" (click)="deleteLunchMeal(lunchmenu); $event.stopPropagation()" />
   </li>
 </ul>
 <div *ngIf="selectedlunchmenu">
   <span class="selectedLunchMeal">
     <img [src]="cuttleries" />
-     <h2>Here is a great Lunch to try:</h2>
-    {{selectedlunchmenu.recommendation | lowercase}}
+     <h2>Here is a great Lunch that would cost only <span class="avgmealcostDetail" >{{selectedlunchmenu.avgmealcost}} pounds</span
+      > </h2>
+    <span class="lunchRecommendationsDetailed">{{selectedlunchmenu.recommendation | lowercase}}</span>
   <img (click)="gotoDetail()" [src]="editIcon" class="editIcon"/>
   </span>
   

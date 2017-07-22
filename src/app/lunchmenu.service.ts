@@ -43,9 +43,9 @@ update(lunchmenu: LunchMenu): Promise<LunchMenu> {
     .then(() => lunchmenu)
     .catch(this.handleError);
 }
-create(recommendation: string): Promise<LunchMenu> {
+create(recommendation: string,lunchMealavgmealcost:number): Promise<LunchMenu> {
   return this.http
-    .post(this.lunchmenusUrl, JSON.stringify({recommendation: recommendation}), {headers: this.headers})
+    .post(this.lunchmenusUrl, JSON.stringify({recommendation: recommendation,avgmealcost:lunchMealavgmealcost}), {headers: this.headers})
     .toPromise()
     .then(res => res.json().data as LunchMenu)
     .catch(this.handleError);
